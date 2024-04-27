@@ -1,0 +1,193 @@
+<!doctype html>
+<html dir="rtl" lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <section id="section">
+
+        <div class="col-10 m-auto" >
+
+            <div class="filter col-12 p-4" style="background-color: #075985;border-radius: 10px;">
+
+                <!-- filter header -->
+                <div class="filter-header">
+                    <h4 class="text-white">فیلتر بر اساس</h4>
+                </div>
+
+                <!-- filter body -->
+                <div class="filter-body mt-3 mb-3">
+                    <div class="filter-content row">
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">رشته</label>
+                                <select class="form-control" id="FormControlSelect1">
+                                <option value="فلسفه و کلام">فلسفه و کلام</option>
+                                <option value="جغرافیا">جغرافیا</option>
+                                <option value="فیزیک">فیزیک</option>
+                                <option value="مهندسی طبیعت">مهندسی طبیعت</option>
+                                <option value="غیره">غیره</option>
+                                </select>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">دانشگاه</label>
+                                <select class="form-control" id="FormControlSelect1">
+                                    <option value="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام خمینی</option>
+                                    <option value="دانشگاه دولتی رازی">دانشگاه دولتی رازی</option>
+                                    <option value="دانشگاه مازندران">دانشگاه مازندران</option>
+                                    <option value="دانشگاه شیراز">دانشگاه شیراز</option>
+                                    <option value="غیره">غیره</option>
+                                </select>                        
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">استان</label>
+                            <select class="form-control" id="FormControlSelect1">
+                                    <option value="قزوین">قزوین</option>
+                                    <option value="کرمانشاه">کرمانشاه</option>
+                                    <option value="مازندران">مازندران</option>
+                                    <option value="فارس">فارس</option>
+                                    <option value="غیره">غیره</option>
+                                </select>                        
+                        </div>
+                <div class="filter-body mt-3 mb-3">
+                    <div class="filter-content row">
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">رشته</label>
+                            <select class="form-control" id="FormControlSelect1">
+                                <option value="قزوین">قزوین</option>
+                                <option value="کرمانشاه">کرمانشاه</option>
+                                <option value="مازندران">مازندران</option>
+                                <option value="شیراز">شیراز</option>
+                                <option value="غیره">غیره</option>
+                                </select>                        
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">دانشگاه</label>
+                            <select class="form-control" id="FormControlSelect1">
+                                <option value="روزانه">روزانه</option>
+                                <option value="شبانه">شبانه</option>
+                                <option value="غیره">غیره</option>
+                                </select>                        
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="exampleInputEmail1" class="text-white mb-2">جنسیت</label>
+                            <select class="form-control" id="FormControlSelect2">
+                              <option>همه</option>
+                              <option>آقا</option>
+                              <option>خانوم</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filter-body mt-3 mb-3">
+                        <div class="filter-content row">
+                            <div class="form-group col-4">
+                                <label for="exampleInputEmail1" class="text-white mb-2">نام</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="exampleInputEmail1" class="text-white mb-2">بازه رتبه</label>
+                                <div class="d-flex justify-content-between gap-2">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1000000">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+                                </div>
+                            </div>
+                            
+                            <!-- Rank -->
+                            <div class="form-group col-4">
+                                <label for="customRange1" class="form-label text-white mb-2">رنج</label>
+                                <input type="range" class="form-range" id="customRange1">
+                            </div>
+                        </div>
+                </div> 
+
+                <!-- filter footer -->
+                <div class="filter-footer mt-2 d-flex justify-content-end">
+                    <button class="btn btn-warning">اعمال فیلتر</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="section col-10 m-auto">
+        <div class="col-12 d-flex justify-content-between gap-2">
+            <!-- Card -->
+            <div class="col-3">
+                <div class="card-header">
+                    <img src="img/user01.png" data-person-imgURL="img/user01.png" alt="user" class="col-12 rounded-circle border border-white border-5 mx-auto d-block bg-warning bg-gradient">
+                </div>
+                <div class="container card-body">
+                    <span class="" data-person-fullName> <span
+                        data-person-gender="خانم">خانم</span>
+                    <span data-person-name="نرگس">نرگس</span> <span data-person-family="شکری">شکری</span>
+                    </span>
+                    <span class="">رتبه در منطقه</span>
+                    <span class=""
+                        data-person-rank="43155">43155</span>
+                    <span class="">قبولی در</span>
+                    <span class="hidden" data-person-province="قزوین">قزوین</span>
+                    <span class="" data-person-city="قزوین">قزوین</span>
+                    <span class="" data-person-university="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام
+                        خمینی</span>
+                    <span class=""> <span data-person-studyField="فلسفه و کلام">فلسفه و کلام
+                        </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
+                    <div class="">
+                        <button class="btn" class="btn" @click="modalOpen = true" aria-controls="modal"
+                            aria-label="Watch the video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="w-2 h-2">
+                                <path fill-rule="evenodd"
+                                    d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm-.847-9.766A.75.75 0 0 0 6 5.866v4.268a.75.75 0 0 0 1.153.633l3.353-2.134a.75.75 0 0 0 0-1.266L7.153 5.234Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            استعلام کارنامه
+                        </button>
+                        <button class="btn" class="btn" @click="modalOpen = true" aria-controls="modal"
+                            aria-label="Watch the video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="w-2 h-2">
+                                <path fill-rule="evenodd"
+                                    d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm-.847-9.766A.75.75 0 0 0 6 5.866v4.268a.75.75 0 0 0 1.153.633l3.353-2.134a.75.75 0 0 0 0-1.266L7.153 5.234Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            ویدیو مصاحبه
+                        </button>
+                        <button class="btn" class="btn" @click="modalOpen = true" aria-controls="modal"
+                        aria-label="Watch the video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                            class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm-.847-9.766A.75.75 0 0 0 6 5.866v4.268a.75.75 0 0 0 1.153.633l3.353-2.134a.75.75 0 0 0 0-1.266L7.153 5.234Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        استعلام کارنامه
+                    </button>
+                    <button class="btn" class="btn" @click="modalOpen = true" aria-controls="modal"
+                        aria-label="Watch the video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                            class="w-4 h-4">
+                            <path fill-rule="evenodd"
+                                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm-.847-9.766A.75.75 0 0 0 6 5.866v4.268a.75.75 0 0 0 1.153.633l3.353-2.134a.75.75 0 0 0 0-1.266L7.153 5.234Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        ویدیو مصاحبه
+                    </button>
+                </div>
+            </div>
+            <div class="id-number" data-id="1">1</div>
+        </div>
+    </main>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+/* Custom CSS */
+:root{
+
+--txt-color-blue-bold : #075985;
+--txt-color-blue-low : #0369a1;
+--txt-color-yellow-fs : rgb(245 158 11);
+--txt-color-gray-border :  #e5e7eb;
+
+}
+/* General styles */
+body {
+    font-family: 'Mikhak';
+}
+
+/* Header card styles */
+.header-card {
+    z-index: 2;
+    width: 120px;
+    border-radius: 999px;
+    margin-bottom: -64px;
+}
+
+/* Span styles */
+span {
+    text-align: center;
+    justify-content: center;
+}
+
+/* Body card styles */
+.body-card {
+    z-index: -1;
+    top: 80px;
+    border: 2px solid var(--txt-color-gray-border);
+    font-size: 16px;
+    color: var(--txt-color-blue-low);
+    font-weight: 100;
+    padding-top: 70px;
+    height: 408px;
+    /* margin-top: -64px; */
+}
+
+/* ID number styles */
+.id-number {
+    width: 64px;
+    /* position: relative; */
+    /* right: 216px; */
+    /* top: -392px; */
+    border: 2px solid var(--txt-color-gray-border);
+    border-radius: 8px 0;
+    z-index: 1;
+    margin-top: -392px;
+    margin-right: 216px;
+}
+
+/* Person full name styles */
+.person-fullName {
+    margin-top: 50px;
+}
+
+/* HB card styles */
+.hb-card {
+    /* position: relative; */
+}
+
+/* Person-btn */
+.person-btn {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    font-size: 8px;
+    border: 1px solid var(--txt-color-gray-border);
+}
+
+.div-btn{
+/* 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between; */
+
+}
+
+/* Filter footer styles */
+.filter-footer {
+    font-size: 1rem;
+}
+
+/* Person province styles */
+.person-province {
+    visibility: hidden;
+}
+
+.person-fullName{
+    font-weight: 100;
+    color: var(--txt-color-blue-bold);
+}
+
+.person-rank-txt{
+    color: var(--txt-color-blue-low);
+}
+
+.person-rank{
+    color: var(--txt-color-yellow-fs);
+    font-size: 48px;
+    color: var(--txt-color-yellow-fs);
+}
+
+.person-province{
+        margin-top: -10px;
+        padding-bottom: -10px;
+}
+
+.person-city{
+    font-size: 30px;
+    color: var(--txt-color-yellow-low);
+}
+
+.person-university{
+    font-weight: 100;
+}
+
+.person-studyField{
+    font-weight: 100;
+}
