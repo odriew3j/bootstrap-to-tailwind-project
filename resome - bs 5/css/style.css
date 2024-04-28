@@ -10,6 +10,7 @@
 /* General styles */
 body {
     font-family: 'Mikhak';
+    position: relative;
 }
 
 /* Header card styles */
@@ -31,6 +32,7 @@ span {
     z-index: -1;
     top: 80px;
     border: 2px solid var(--txt-color-gray-border);
+    border-radius: 8px;
     font-size: 16px;
     color: var(--txt-color-blue-low);
     font-weight: 100;
@@ -48,7 +50,7 @@ span {
     border: 2px solid var(--txt-color-gray-border);
     border-radius: 8px 0;
     z-index: 1;
-    margin-top: -392px;
+    margin-top: -376px;
     margin-right: 216px;
 }
 
@@ -62,27 +64,38 @@ span {
     /* position: relative; */
 }
 
+.div-btn{
+
+    /* margin-top: 20px; */
+}
+
 /* Person-btn */
 .person-btn {
+    color: var(--txt-color-blue-bold);
     display: flex;
-    align-content: space-between;
     align-items: center;
+    text-align: center;
     align-content: space-between;
-    font-size: 8px;
-    border: 1px solid var(--txt-color-gray-border);
+    font-size: 12px;
+    border: 2px solid var(--txt-color-gray-border);
+    border-radius: 8px;
+    font-family: 'Mikhak-thin';
+    font-weight: 900;
 }
 
-.div-btn{
-/* 
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between; */
-
+/* Btn filter & more styles */
+.filter-more-btn {
+    font-size: 0.75rem;
+    color: var(--txt-color-blue-bold);
+    border: 2px solid var(--txt-color-gray-border);
+    border-radius: 8px;
+    font-family: 'Mikhak-bold';
+    font-weight: 900;
 }
 
-/* Filter footer styles */
-.filter-footer {
-    font-size: 1rem;
+.person-province-city{
+    font-family: 'Mikhak-light';
+    font-weight: 400;
 }
 
 /* Person province styles */
@@ -91,12 +104,17 @@ span {
 }
 
 .person-fullName{
-    font-weight: 100;
+    font-family: 'Mikhak-Light';
+    font-weight: 400;
     color: var(--txt-color-blue-bold);
+
+    
 }
 
 .person-rank-txt{
     color: var(--txt-color-blue-low);
+    font-family: 'Mikhak-bold';
+    font-weight: 900;
 }
 
 .person-rank{
@@ -108,17 +126,27 @@ span {
 .person-province{
         margin-top: -10px;
         padding-bottom: -10px;
+
 }
 
 .person-city{
     font-size: 30px;
     color: var(--txt-color-yellow-low);
+    font-family: 'Mikhak-black';
+    font-weight: bold;
+    margin-top: -30px;
 }
 
 .person-university{
     font-weight: 100;
+    font-family: 'Mikhak-Light';
+    font-weight: 400;
 }
 
 .person-studyField{
     font-weight: 100;
+    font-family: 'Mikhak-Light';
+    font-weight: 400;
+    /* margin-bottom: 40px; */
 }
+

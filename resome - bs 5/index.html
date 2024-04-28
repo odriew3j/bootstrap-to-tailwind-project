@@ -18,7 +18,7 @@
 
         <div class="col-10 m-auto mt-5" >
 
-            <div class="filter col-12 p-4" style="background-color: #075985;border-radius: 10px;">
+            <div class="filter col-12 p-4" style="background: linear-gradient(to top right , #0369a1, rgb(245 158 11));border-radius: 10px;">
 
                 <!-- filter header -->
                 <div class="filter-header">
@@ -38,7 +38,7 @@
                                 <option value="غیره">غیره</option>
                                 </select>
                         </div>
-                        <div class="form-group col-4">
+                        <div class="form-group col-4 col-">
                             <label for="exampleInputEmail1" class="text-white mb-2">دانشگاه</label>
                                 <select class="form-control" id="FormControlSelect1">
                                     <option value="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام خمینی</option>
@@ -110,8 +110,8 @@
                 </div> 
 
                 <!-- filter footer -->
-                <div class="filter-footer mt-2 d-flex justify-content-end f-size-1">
-                    <button class="btn btn-warning">اعمال فیلتر</button>
+                <div class="filter-footer mt-2 d-flex justify-content-end  -1">
+                    <button class="btn filter-more-btn btn-warning"  style="background-color: #f59e0b;color: #fff;border: 2px solid var(--txt-color-gray-border);border-radius: 8px;">اعمال فیلتر</button>
                 </div>
             </div>
         </div>
@@ -133,15 +133,15 @@
                             <span class="person-rank-txt row">رتبه در منطقه</span>
                             <span class="person-rank row"
                                 data-person-rank="43155">43155</span>
-                            <span class="row">قبولی در</span>
+                            <span class="person-province-city row">قبولی در</span>
                             <span class="person-province" data-person-province="قزوین">قزوین</span>
                             <span class="person-city row" data-person-city="قزوین">قزوین</span>
                             <span class="person-university row" data-person-university="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام
                                 خمینی</span>
                             <span class="person-studyField"> <span data-person-studyField="فلسفه و کلام">فلسفه و کلام
                                 </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
-                            <div class="div-btn d-flex gap-4 mt-4 ">
-                                <button class="person-btn btn" class="btn w-50 f-size" @click="modalOpen = true" aria-controls="modal"
+                            <div class="div-btn d-flex gap-5 mt-3 pt-2 ">
+                                <button class="person-btn btn" class="btn w-50  " @click="modalOpen = true" aria-controls="modal"
                                     aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
@@ -166,28 +166,29 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Card -->
             <div class="hb-card col-3" >
                 <div class=" header-card border-white border-1 shadow mx-auto" >
-                    <img src="img/user01.png" data-person-imgURL="img/user01.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
+                    <img src="img/user02.png" data-person-imgURL="img/user02.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
                 </div>
                     <div class="col-12">
                         <div class="body-card col-12 container card-body bg-white bg-gradient shadow rounded text-center" >
                             <span class="person-fullName text-center" data-person-fullName> <span
                                 data-person-gender="خانم">خانم</span>
-                            <span data-person-name="نرگس">نرگس</span> <span data-person-family="شکری">شکری</span>
+                            <span data-person-name="بشرا">بشرا</span> <span data-person-family="سلطانیان">سلطانیان</span>
                             </span>
                             <span class="person-rank-txt row">رتبه در منطقه</span>
                             <span class="person-rank row"
-                                data-person-rank="43155">43155</span>
-                            <span class="row">قبولی در</span>
-                            <span class="person-province" data-person-province="قزوین">قزوین</span>
-                            <span class="person-city row" data-person-city="قزوین">قزوین</span>
-                            <span class="person-university row" data-person-university="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام
-                                خمینی</span>
-                            <span class="person-studyField"> <span data-person-studyField="فلسفه و کلام">فلسفه و کلام
-                                </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
-                            <div class="div-btn d-flex gap-4 mt-4 ">
-                                <button class="person-btn btn" class="btn w-50 f-size" @click="modalOpen = true" aria-controls="modal"
+                                data-person-rank="11468">11468</span>
+                            <span class="person-province-city row">قبولی در</span>
+                            <span class="person-province" data-person-province="کرمانشاه">کرمانشاه</span>
+                            <span class="person-city row" data-person-city="کرمانشاه">کرمانشاه</span>
+                            <span class="person-university row" data-person-university="دانشگاه دولتی رازی">دانشگاه دولتی رازی</span>
+                            <span class="person-studyField"> <span data-person-studyField="جغرافیا">جغرافیا
+                            </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
+                            <div class="div-btn d-flex gap-5  mt-3 pt-2 ">
+                                <button class="person-btn btn" class="btn w-50  " @click="modalOpen = true" aria-controls="modal"
                                     aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
@@ -212,28 +213,29 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Card -->
             <div class="hb-card col-3" >
                 <div class=" header-card border-white border-1 shadow mx-auto" >
-                    <img src="img/user01.png" data-person-imgURL="img/user01.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
+                    <img src="img/user03.png" data-person-imgURL="img/user03.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
                 </div>
                     <div class="col-12">
                         <div class="body-card col-12 container card-body bg-white bg-gradient shadow rounded text-center" >
                             <span class="person-fullName text-center" data-person-fullName> <span
-                                data-person-gender="خانم">خانم</span>
-                            <span data-person-name="نرگس">نرگس</span> <span data-person-family="شکری">شکری</span>
+                                data-person-gender="آقا">آقا</span>
+                            <span data-person-name="صالحی کیا">صالحی کیا</span> <span data-person-family="شکری">شکری</span>
                             </span>
                             <span class="person-rank-txt row">رتبه در منطقه</span>
                             <span class="person-rank row"
-                                data-person-rank="43155">43155</span>
-                            <span class="row">قبولی در</span>
-                            <span class="person-province" data-person-province="قزوین">قزوین</span>
-                            <span class="person-city row" data-person-city="قزوین">قزوین</span>
-                            <span class="person-university row" data-person-university="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام
-                                خمینی</span>
-                            <span class="person-studyField"> <span data-person-studyField="فلسفه و کلام">فلسفه و کلام
+                                data-person-rank="69066">69066</span>
+                            <span class="person-province-city row">قبولی در</span>
+                            <span class="person-province" data-person-province="مازندران">مازندران</span>
+                            <span class="person-city row" data-person-city="مازندران">مازندران</span>
+                            <span class="person-university row" data-person-university="دانشگاه مازندران">دانشگاه مازندران</span>
+                            <span class="person-studyField"> <span data-person-studyField="فیزیک">فیزیک
                                 </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
-                            <div class="div-btn d-flex gap-4 mt-4 ">
-                                <button class="person-btn btn" class="btn w-50 f-size" @click="modalOpen = true" aria-controls="modal"
+                            <div class="div-btn d-flex gap-5  mt-3 pt-2 ">
+                                <button class="person-btn btn" class="btn w-50  " @click="modalOpen = true" aria-controls="modal"
                                     aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
@@ -258,28 +260,29 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Card -->
             <div class="hb-card col-3" >
                 <div class=" header-card border-white border-1 shadow mx-auto" >
-                    <img src="img/user01.png" data-person-imgURL="img/user01.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
+                    <img src="img/user04.png" data-person-imgURL="img/user04.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
                 </div>
                     <div class="col-12">
                         <div class="body-card col-12 container card-body bg-white bg-gradient shadow rounded text-center" >
                             <span class="person-fullName text-center" data-person-fullName> <span
                                 data-person-gender="خانم">خانم</span>
-                            <span data-person-name="نرگس">نرگس</span> <span data-person-family="شکری">شکری</span>
+                            <span data-person-name="هانیه">هانیه</span> <span data-person-family="میرجانی">میرجانی</span>
                             </span>
                             <span class="person-rank-txt row">رتبه در منطقه</span>
                             <span class="person-rank row"
-                                data-person-rank="43155">43155</span>
-                            <span class="row">قبولی در</span>
-                            <span class="person-province" data-person-province="قزوین">قزوین</span>
-                            <span class="person-city row" data-person-city="قزوین">قزوین</span>
-                            <span class="person-university row" data-person-university="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام
-                                خمینی</span>
-                            <span class="person-studyField"> <span data-person-studyField="فلسفه و کلام">فلسفه و کلام
-                                </span>(<span data-person-studyPeriod="روزانه">روزانه</span>)</span>
-                            <div class="div-btn d-flex gap-4 mt-4 ">
-                                <button class="person-btn btn" class="btn w-50 f-size" @click="modalOpen = true" aria-controls="modal"
+                                data-person-rank="53521">53521</span>
+                            <span class="person-province-city row">قبولی در</span>
+                            <span class="person-province" data-person-province="فارس">فارس</span>
+                            <span class="person-city row" data-person-city="فارس">فارس</span>
+                            <span class="person-university row" data-person-university="دانشگاه شیراز">دانشگاه شیراز</span>
+                            <span class="person-studyField"> <span data-person-studyField="مهندسی طبیعت">مهندسی طبیعت
+                                </span>(<span data-person-studyPeriod="شبانه">شبانه</span>)</span>
+                            <div class="div-btn d-flex gap-5 mt-3 pt-2 ">
+                                <button class="person-btn btn" class="btn w-50" @click="modalOpen = true" aria-controls="modal"
                                     aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
@@ -289,7 +292,7 @@
                                     </svg>
                                     استعلام کارنامه
                                 </button>
-                                <button class="person-btn btn" class="btn w-50" @click="modalOpen = true" aria-controls="modal"
+                                <button class="person-btn btn" class="btn w-50" @click="modalOpen = true" aria-controls="modal" style="flex-;"
                                     aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
@@ -303,6 +306,10 @@
                         <div class="id-number col-1 bg-gradient align-baseline" data-id="1">1</div>
                     </div>
                 </div>
+            </div>
+            <!-- Show More -->
+            <div class="mx-auto mt-5 mb-4 text-center" id="showMore">
+                <button class="btn filter-more-btn col-3">نمایش بیشتر ...</button>
             </div>
         </div>
     </main>
@@ -312,6 +319,8 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
@@ -322,7 +331,7 @@
 
 
 
-                            <!-- <button class="person-btn btn" class="btn w-50 f-size" @click="modalOpen = true" aria-controls="modal"
+                            <!-- <button class="person-btn btn" class="btn w-50  " @click="modalOpen = true" aria-controls="modal"
                             aria-label="Watch the video">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                 class="w-2 h-2">
