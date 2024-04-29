@@ -51,7 +51,7 @@ span {
     border-radius: 8px 0;
     z-index: 1;
     margin-top: -376px;
-    margin-right: 216px;
+    margin-right: 188px;
 }
 
 /* Person full name styles */
@@ -149,4 +149,8 @@ span {
     font-weight: 400;
     /* margin-bottom: 40px; */
 }
+
+.range-slider {
+    margin: 20px;
+  }
 

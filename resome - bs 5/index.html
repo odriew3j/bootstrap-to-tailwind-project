@@ -4,11 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+    <!-- Plugin CSS file with desired skin -->
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <!-- vuejs -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- css -->
+    <!-- Custom CSS -->
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -30,7 +38,7 @@
                     <div class="filter-content row">
                         <div class="form-group col-4">
                             <label for="exampleInputEmail1" class="text-white mb-2">رشته</label>
-                                <select class="form-control" id="FormControlSelect1">
+                                <select class="form-control" id="studyField" name="studyField[]" multiple="multiple">
                                 <option value="فلسفه و کلام">فلسفه و کلام</option>
                                 <option value="جغرافیا">جغرافیا</option>
                                 <option value="فیزیک">فیزیک</option>
@@ -40,7 +48,7 @@
                         </div>
                         <div class="form-group col-4 col-">
                             <label for="exampleInputEmail1" class="text-white mb-2">دانشگاه</label>
-                                <select class="form-control" id="FormControlSelect1">
+                                <select class="form-control" id="university" name="university[]" multiple="multiple">
                                     <option value="دانشگاه دولتی امام خمینی">دانشگاه دولتی امام خمینی</option>
                                     <option value="دانشگاه دولتی رازی">دانشگاه دولتی رازی</option>
                                     <option value="دانشگاه مازندران">دانشگاه مازندران</option>
@@ -50,7 +58,7 @@
                         </div>
                         <div class="form-group col-4">
                             <label for="exampleInputEmail1" class="text-white mb-2">استان</label>
-                            <select class="form-control" id="FormControlSelect1">
+                            <select class="form-control" id="province" name="province[]" multiple="multiple">
                                     <option value="قزوین">قزوین</option>
                                     <option value="کرمانشاه">کرمانشاه</option>
                                     <option value="مازندران">مازندران</option>
@@ -62,7 +70,7 @@
                     <div class="filter-content row">
                         <div class="form-group col-4">
                             <label for="exampleInputEmail1" class="text-white mb-2">رشته</label>
-                            <select class="form-control" id="FormControlSelect1">
+                            <select class="form-control" id="city"  name="city[]" multiple="multiple">
                                 <option value="قزوین">قزوین</option>
                                 <option value="کرمانشاه">کرمانشاه</option>
                                 <option value="مازندران">مازندران</option>
@@ -72,7 +80,7 @@
                         </div>
                         <div class="form-group col-4">
                             <label for="exampleInputEmail1" class="text-white mb-2">دانشگاه</label>
-                            <select class="form-control" id="FormControlSelect1">
+                            <select class="form-control" id="studyPeriod" name="studyPeriod[]" multiple="multiple">
                                 <option value="روزانه">روزانه</option>
                                 <option value="شبانه">شبانه</option>
                                 <option value="غیره">غیره</option>
@@ -80,7 +88,7 @@
                         </div>
                         <div class="form-group col-4">
                             <label for="exampleInputEmail1" class="text-white mb-2">جنسیت</label>
-                            <select class="form-control" id="FormControlSelect2">
+                            <select class="form-control" id="gender" name="gender[]">
                               <option>همه</option>
                               <option>آقا</option>
                               <option>خانوم</option>
@@ -91,27 +99,32 @@
                         <div class="filter-content row">
                             <div class="form-group col-4">
                                 <label for="exampleInputEmail1" class="text-white mb-2">نام</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="">
                             </div>
+
+                            <!-- Rank -->
                             <div class="form-group col-4">
                                 <label for="exampleInputEmail1" class="text-white mb-2">بازه رتبه</label>
                                 <div class="d-flex justify-content-between gap-2">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1000000">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
+                                    <input type="text" class="js-input-to form-control" id="js-input-to" aria-describedby="rankHelp" placeholder="تا">
+                                    <input type="text" class="js-input-from form-control" id="js-input-from" aria-describedby="rankHelp" placeholder="از">
                                 </div>
-                            </div>
+                            </div>                            
                             
                             <!-- Rank -->
                             <div class="form-group col-4">
-                                <label for="customRange1" class="form-label text-white mb-2">رنج</label>
-                                <input type="range" class="form-range" id="customRange1">
+                                <div class="form-group col-4">
+                                    <label for="customRange1" class="form-label text-white mb-2">رنج</label>
+                                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                                  </div>
                             </div>
                         </div>
                 </div> 
 
                 <!-- filter footer -->
                 <div class="filter-footer mt-2 d-flex justify-content-end  -1">
-                    <button class="btn filter-more-btn btn-warning"  style="background-color: #f59e0b;color: #fff;border: 2px solid var(--txt-color-gray-border);border-radius: 8px;">اعمال فیلتر</button>
+                    <button class="btn filter-more-btn btn-warning" 
+                    id="submitFilter" style="background-color: #f59e0b;color: #fff;border: 2px solid var(--txt-color-gray-border);border-radius: 8px;">اعمال فیلتر</button>
                 </div>
             </div>
         </div>
@@ -120,7 +133,7 @@
     <main class="section col-10 m-auto mt-5">
         <div class="col-12 row d-flex mt-10 d-flex">
             <!-- Card -->
-            <div class="hb-card col-3" >
+            <div class="card hb-card col-3" >
                 <div class=" header-card border-white border-1 shadow mx-auto" >
                     <img src="img/user01.png" data-person-imgURL="img/user01.png" alt="user" class="rounded-circle col-12 d-block bg-warning bg-gradient border-white border-5">
                 </div>
@@ -209,7 +222,7 @@
                                     ویدیو مصاحبه
                                 </button>
                         </div>
-                        <div class="id-number col-1 bg-gradient align-baseline" data-id="1">1</div>
+                        <div class="id-number col-1 bg-gradient align-baseline" data-id="2">2</div>
                     </div>
                 </div>
             </div>
@@ -256,7 +269,7 @@
                                     ویدیو مصاحبه
                                 </button>
                         </div>
-                        <div class="id-number col-1 bg-gradient align-baseline" data-id="1">1</div>
+                        <div class="id-number col-1 bg-gradient align-baseline" data-id="3">3</div>
                     </div>
                 </div>
             </div>
@@ -292,8 +305,7 @@
                                     </svg>
                                     استعلام کارنامه
                                 </button>
-                                <button class="person-btn btn" class="btn w-50" @click="modalOpen = true" aria-controls="modal" style="flex-;"
-                                    aria-label="Watch the video">
+                                <button class="person-btn btn" class="btn w-50" @click="modalOpen = true" aria-controls="modal" aria-label="Watch the video">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
                                         class="w-2 h-2">
                                         <path fill-rule="evenodd"
@@ -303,7 +315,7 @@
                                     ویدیو مصاحبه
                                 </button>
                         </div>
-                        <div class="id-number col-1 bg-gradient align-baseline" data-id="1">1</div>
+                        <div class="id-number col-1 bg-gradient align-baseline" data-id="4">4</div>
                     </div>
                 </div>
             </div>
@@ -311,16 +323,69 @@
             <div class="mx-auto mt-5 mb-4 text-center" id="showMore">
                 <button class="btn filter-more-btn col-3">نمایش بیشتر ...</button>
             </div>
+            <!-- Not Found -->
+            <!-- <div class="card bg-white col-span-full hidden notFound" id="notFound">
+                <div class="card-body h-full flex flex-col items-center p-8">
+                    <span class="text-3xl font-bold flex items-start gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-6 h-6 text-amber-500">
+                            <path fill-rule="evenodd"
+                                d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-sky-700">
+                                برای فیلتر مورد نظر شما نتیجه ای یافت نشد
+                            </span>
+                            <span class="text-sky-700 font-normal text-sm">پیشنهاد می‌کنیم فیلترها را تغییر
+                                دهید</span>
+                        </div>
+                    </span>
+                </div>
+            </div> -->
+
         </div>
+                <!-- Modal backdrop -->
+                <!-- <div class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity" x-show="modalOpen"
+                x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100" x-transition:leave="transition ease-out duration-100"
+                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak></div> -->
+            <!-- End: Modal backdrop -->
+    
+            <!-- Modal dialog -->
+            <!-- <div id="modal" class="fixed inset-0 z-[99999] flex px-4 md:px-6 py-6" role="dialog" aria-modal="true"
+                x-show="modalOpen" x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-75" x-cloak>
+                <div class="w-full lg:max-w-5xl mx-auto h-full flex flex-col justify-center items-center">
+                    <div class="modal-title font-mikhak bg-sky-700 text-center rounded-t-2xl shadow p-6 w-full text-white text-2xl">
+                        
+                    </div>
+                    <div class="w-full max-h-full rounded-b-2xl shadow-2xl aspect-video bg-black overflow-hidden"
+                        @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+                        <video controls>
+                            <source src="" type="video/mp4" />
+                            مرورگر شما ویدئو با این پسوند را پشتیبانی نمی کند.
+                        </video>
+                    </div>
+                </div>
+            </div> -->
+            <!-- End: Modal dialog -->
     </main>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <!-- Jquery -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <!-- Plugin JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="js/min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
