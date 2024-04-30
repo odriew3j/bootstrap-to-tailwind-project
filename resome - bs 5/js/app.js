@@ -39,6 +39,7 @@ $(".js-input-from, .js-input-to").on("input", function () {
 // Filter & Search
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#submitFilter').addEventListener('click', () => {
+
         // Get selected options from all selects
         const selectedStudyFields = getSelectedOptions('#studyField');
         const selectedUniversities = getSelectedOptions('#university');
@@ -115,6 +116,7 @@ let buttons = document.querySelectorAll('.btn');
 // برای هر دکمه یک تابع رویداد کلیک اضافه می‌کنیم
 buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
+        console.log(event.target);
         // id کارت را از ویژگی data-id دریافت می‌کنیم
         let id = event.target.closest('.card').querySelector('.id-number').dataset.id;
 

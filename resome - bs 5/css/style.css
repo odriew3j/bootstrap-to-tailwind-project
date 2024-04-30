@@ -51,7 +51,17 @@ span {
     border-radius: 8px 0;
     z-index: 1;
     margin-top: -376px;
-    margin-right: 188px;
+    margin-right: 216px;
+}
+
+/* filter-lable */
+.filter-lable{
+
+    color: var(--txt-color-gray-border);
+    font-size: 1rem;
+    font-family: 'yekanBakh-bold';
+    font-weight: 900;
+
 }
 
 /* Person full name styles */
@@ -154,3 +164,10 @@ span {
     margin: 20px;
   }
 
+/* JS direction */
+.irs-to, .irs-from, .irs-max, .irs-min {
+    direction: ltr;
+    font-family: 'yekanBakh-regular';
+    font-weight: bold;
+    font-size: 12px;
+}
