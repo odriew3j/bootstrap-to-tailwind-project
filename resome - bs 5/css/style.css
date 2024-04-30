@@ -43,15 +43,26 @@ span {
 
 /* ID number styles */
 .id-number {
-    width: 64px;
+    /* width: 64px; */
     /* position: relative; */
     /* right: 216px; */
     /* top: -392px; */
     border: 2px solid var(--txt-color-gray-border);
-    border-radius: 8px 0;
+    /* border-radius: 8px 0;
     z-index: 1;
     margin-top: -376px;
-    margin-right: 216px;
+    margin-right: 216px; */
+    position: absolute;
+    top: 64px;
+    left: 24px;
+    display: flex;
+    height: 2.5rem;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+    border-width: 2px;
 }
 
 /* filter-lable */
@@ -70,9 +81,9 @@ span {
 }
 
 /* HB card styles */
-.hb-card {
-    /* position: relative; */
-}
+/* .hb-card {
+     position: relative; 
+} */
 
 .div-btn{
 
