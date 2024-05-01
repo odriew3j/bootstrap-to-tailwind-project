@@ -13,6 +13,12 @@ body {
     position: relative;
 }
 
+.filter-header{
+
+    /* overflow-y: scroll; */
+
+}
+
 /* Header card styles */
 .header-card {
     z-index: 2;
@@ -86,7 +92,10 @@ span {
 } */
 
 .div-btn{
-
+    gap: 1rem;
+    width: 100%;
+    tab-size: 4;
+    display: flex;
     /* margin-top: 20px; */
 }
 
@@ -181,4 +190,18 @@ span {
     font-family: 'yekanBakh-regular';
     font-weight: bold;
     font-size: 12px;
+}
+
+/* Respons */
+.respons-max-whith, .scroller {
+    overflow-y: auto; /* افزودن اسکرول بار عمودی */
+    max-height: 500px;
+    scrollbar-color: var(--txt-color-gray-border) var(--txt-color-blue-bold)
+
+}
+
+@media only screen and (max-width: 600px) {
+    .respons-max-whith {
+        overflow-y: scroll; /* افزودن اسکرول عمودی در صورت نیاز */
+    }
 }

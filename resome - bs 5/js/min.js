@@ -1,3 +1,5 @@
+
+
 // Select2 call
 $(document).ready(function () {
     $('.select2').select2();
@@ -37,3 +39,13 @@ $(".js-input-from, .js-input-to").on("input", function () {
 // Range Slider Configure
 
 // Filter & Search
+
+// overFollow
+
+function myOverFollow() {
+    document.getElementById("scroller").style.scrollbarColor = "red blue";
+  }
+
+function myFunction() {
+    document.getElementById("scroller").style.scrollbarWidth = "thin";
+  }
